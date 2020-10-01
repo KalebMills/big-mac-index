@@ -1,7 +1,7 @@
 import { WebService, WebServiceOptions, ProcessManager } from '../lib/server';
 import pino from 'pino';
 
-//Usually these properties would be inject via some type of DI system, but for such a small project, we will instead defined the dependencies here
+//Usually these properties would be inject via some type of DI system, but for such a small project, we will instead define the dependencies here
 const logger = pino({ prettyPrint: true });
 
 const processManager = new ProcessManager({ logger });

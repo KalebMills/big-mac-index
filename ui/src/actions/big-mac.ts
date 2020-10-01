@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { BigMacIndex, CountryResponse } from '../interfaces';
 
-const API_HOST = process.env.REACT_APP_API_HOST;
+
+//Usually this is defined via .env or some sort of configuration. For simplicity, it's defined here.
+const API_HOST = 'localhost:9658';
 
 export const GENERIC_ERROR_MESSAGE = 'An error occurred with your request';
 

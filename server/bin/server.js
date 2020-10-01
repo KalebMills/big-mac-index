@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = require("../lib/server");
 const pino_1 = __importDefault(require("pino"));
-//Usually these properties would be inject via some type of DI system, but for such a small project, we will instead defined the dependencies here
+//Usually these properties would be inject via some type of DI system, but for such a small project, we will instead define the dependencies here
 const logger = pino_1.default({ prettyPrint: true });
 const processManager = new server_1.ProcessManager({ logger });
 const webServiceOptions = {
