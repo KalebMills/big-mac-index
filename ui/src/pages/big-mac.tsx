@@ -4,6 +4,7 @@ import * as actions from '../actions/big-mac';
 import '../styles/big-mac.scss';
 import { loadBigMacIndexData, setBigMacDataToState } from '../util';
 import { BigMacIndex, BigMacIndexConverted, CountryResponse } from '../interfaces';
+import { MoonLoader } from 'react-spinners';
 
 export interface BigMacComponentState {
     user: {
@@ -63,7 +64,12 @@ const BigMac = (): JSX.Element => {
 
  
     if (state.loading) {
-        return <div>Loading..</div>;
+        return <div style={{ margin: 'auto', marginTop: '20%', marginLeft: '45%', textAlign: 'center' }} >
+            <MoonLoader 
+                loading={state.loading} 
+                size={120} 
+            />
+        </div>;
     } else {
         return (
             <div>
