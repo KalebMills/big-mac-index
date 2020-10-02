@@ -25,11 +25,13 @@ const MainRoute = (processes: ProcessManager, bigMacData: BigMacData, logger: pi
             clientIp = '8.8.8.8';
         }
 
-        axios.get(`https://ipvigilante.com/json/${clientIp}`)
+        const p = axios.get(`https://ipvigilante.com/json/${clientIp}`)
         .then(data => {
             res.status(200).json({ data: data.data.data });
         })
         .catch(err => next(err));
+
+        processes.addProcess(p);
     });
 
     return router;
